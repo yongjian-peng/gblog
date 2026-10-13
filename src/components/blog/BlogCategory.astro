@@ -2,11 +2,13 @@
 import { Image } from 'astro:assets'
 import terminal from '@images/theme/terminal-monitor.png'
 import notebook from '@images/theme/field-notebook.png'
+import board from '@images/theme/development-board.png'
 
 interface Props { slug: string, title: string, description: string, count: number, publishDate?: string }
 const { slug, title, description, count, publishDate } = Astro.props
 const marks: Record<string, string> = { astro: '✦', laravel: 'L', mysql: 'SQL', php: 'php' }
-const image = slug === 'tool' ? terminal : slug === 'whatis' ? notebook : undefined
+const images = { tool: terminal, whatis: notebook, embedded: board }
+const image = images[slug as keyof typeof images]
 ---
 <a class="category-card panel" href={`/categories/${slug}/`}>
     <div class="category-icon">{image ? <Image src={image} width={100} height={100} alt="" loading="lazy" /> : <span>{marks[slug] ?? '#'}</span>}</div>

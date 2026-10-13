@@ -6,7 +6,7 @@ import { formatDate } from '@support/time'
 interface Props { blog: CollectionEntry<'posts'> }
 const { blog } = Astro.props
 ---
-<a class="article-card" href={`/posts/${blog.slug}/`}>
+<a class:list={['article-card', { 'rg200u-article': blog.slug === 'rg200u-5g-debug' }]} href={`/posts/${blog.slug}/`}>
     <div class="article-card-cover"><Image src={blog.data.banner2 ?? blog.data.banner} alt={blog.data.title} width={700} height={390} loading="lazy" /><span class="round-arrow" aria-hidden="true">→</span></div>
     <div class="article-card-copy"><time datetime={blog.data.pubDate.toISOString()}>{formatDate(blog.data.pubDate)}</time><h3>{blog.data.title}</h3><p>{blog.data.description}</p><div class="tags">{(blog.data.tags ?? []).map(tag => <span class="tag">{tag}</span>)}</div></div>
 </a>

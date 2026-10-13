@@ -24,7 +24,7 @@ commentTitle: "Why Astro? | yongjian-peng博客记录"
 
 - **[孤岛架构](https://docs.astro.build/zh-cn/concepts/islands/)：** 基于组件、针对内容型网站优化的 Web 架构。
 - **[不限定 UI 框架](https://docs.astro.build/zh-cn/guides/framework-components/)：** 支持 React、Preact、Svelte、Vue、Solid、Lit、HTMX、Web Components 等。
-- **[服务端优先](https://docs.astro.build/zh-cn/basics/rendering-modes/)：** 将开销较大的渲染工作移出访客设备。
+- **[服务端优先](https://v4.docs.astro.build/zh-cn/basics/rendering-modes/)：** 将开销较大的渲染工作移出访客设备。
 - **[默认不发送 JavaScript](https://docs.astro.build/zh-cn/basics/astro-components/)：** 减少会拖慢网站的客户端脚本。
 - **[内容集合](https://docs.astro.build/zh-cn/guides/content-collections/)：** 组织和校验 Markdown 内容，并提供 TypeScript 类型安全。
 - **[灵活定制](https://docs.astro.build/zh-cn/guides/integrations-guide/)：** 可以选择 Tailwind、MDX 等丰富的集成。
@@ -57,7 +57,7 @@ Astro 从静态站点生成器起步，始终关注内容，因此能够在尊�
 
 ### 服务端优先
 
-**Astro 尽可能采用[服务端渲染](https://docs.astro.build/zh-cn/basics/rendering-modes/)，而不是在浏览器里进行客户端渲染。** PHP、WordPress、Laravel、Ruby on Rails 等传统服务端框架，几十年来一直使用这种方式。不过，你不必再学习一门服务端语言：在 Astro 中，依然可以使用 HTML、CSS 和 JavaScript，也可以选择 TypeScript。
+**Astro 尽可能采用[服务端渲染](https://v4.docs.astro.build/zh-cn/basics/rendering-modes/)，而不是在浏览器里进行客户端渲染。** PHP、WordPress、Laravel、Ruby on Rails 等传统服务端框架，几十年来一直使用这种方式。不过，你不必再学习一门服务端语言：在 Astro 中，依然可以使用 HTML、CSS 和 JavaScript，也可以选择 TypeScript。
 
 原文将这一方式与 Next.js、SvelteKit、Nuxt、Remix 等现代 JavaScript 框架作比较：这些框架重视整个网站的客户端体验，并结合服务端渲染改善性能。这类模式通常称为**单页应用（SPA）**，而 Astro 更强调**多页应用（MPA）**。
 
