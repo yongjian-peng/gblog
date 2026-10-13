@@ -20,6 +20,8 @@ const ENABLE_IMAGE_OPTIMIZE
 export default defineConfig({
     site: SITE.url,
 
+     base: '/gblog',
+
     image: {
         service: ENABLE_IMAGE_OPTIMIZE ? sharpImageService() : passthroughImageService(),
     },
