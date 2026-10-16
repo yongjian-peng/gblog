@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="1090" viewBox="0 0 660 1090" role="img" aria-labelledby="title desc">
+  <title id="title">麒麟 EC20 QMI 拨号架构</title>
+  <desc id="desc">麒麟 x86 系统通过 option 创建串口，通过 qmi_wwan 创建 QMI 控制通道和 wwan0。systemd 启动 quectel-CM 控制模组，完成 SIM 和 LTE 数据呼叫后配置 IP 与默认路由。</desc>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#bc612f"/></marker></defs>
+  <rect width="660" height="1090" rx="20" fill="#faf4eb"/>
+  <g fill="none" stroke="#bc612f" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M330 124V150H150V180"/><path d="M330 124V150H490V180"/>
+    <path d="M490 276V340"/><path d="M610 228H637V814H610"/>
+    <path d="M150 436V520"/><path d="M280 568H350"/>
+    <path d="M280 550H318V388H350"/><path d="M490 616V766"/>
+    <path d="M490 862V916H330V960"/>
+  </g>
+  <g fill="#fffaf2" stroke="#d9bfa8" stroke-width="2">
+    <rect x="190" y="28" width="280" height="96" rx="14"/>
+    <rect x="20" y="180" width="260" height="96" rx="14"/>
+    <rect x="350" y="180" width="260" height="96" rx="14"/>
+    <rect x="20" y="340" width="260" height="96" rx="14"/>
+    <rect x="350" y="340" width="260" height="96" rx="14"/>
+    <rect x="20" y="520" width="260" height="96" rx="14"/>
+    <rect x="350" y="520" width="260" height="96" rx="14"/>
+    <rect x="350" y="766" width="260" height="96" rx="14"/>
+    <rect x="190" y="960" width="280" height="96" rx="14"/>
+  </g>
+  <g fill="#352b25" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" text-anchor="middle">
+    <text x="330" y="67">银河麒麟 V10 SP1</text><text x="330" y="101" font-size="23">x86_64 · Linux 5.4</text>
+    <text x="150" y="219">USB option 驱动</text><text x="150" y="253" font-size="23">ttyUSB0～3 串口</text>
+    <text x="480" y="219">qmi_wwan 驱动</text><text x="480" y="253" font-size="23">创建控制与数据接口</text>
+    <text x="150" y="379">systemd 自动启动</text><text x="150" y="413" font-size="21">quectel-qmi.service</text>
+    <text x="480" y="379">QMI 控制通道</text><text x="480" y="413" font-size="23">/dev/cdc-wdm0</text>
+    <text x="150" y="559">quectel-CM</text><text x="150" y="593" font-size="23">QCM V1.6.8</text>
+    <text x="480" y="559">SIM_READY / LTE</text><text x="480" y="593" font-size="23">附着与 QMI 数据呼叫</text>
+    <text x="480" y="805">数据接口 wwan0</text><text x="480" y="839" font-size="23">Raw-IP / IPv4 配置</text>
+    <text x="330" y="999">IP、默认网关与联网</text><text x="330" y="1033" font-size="21">100.102.15.67/29（原记录）</text>
+  </g>
+</svg>

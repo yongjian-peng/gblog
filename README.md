@@ -44,7 +44,7 @@ npm run preview
 ## 检查
 
 ```shell
-node --experimental-strip-types --test tests/blog.test.mjs tests/rg200u-content.test.mjs tests/rk3588-vpn-content.test.mjs
+node --experimental-strip-types --test tests/blog.test.mjs tests/rg200u-content.test.mjs tests/rk3588-vpn-content.test.mjs tests/kylin-ec20-content.test.mjs
 npm run lint
 npm run build
 ```

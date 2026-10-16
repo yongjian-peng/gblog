@@ -227,7 +227,7 @@ h1, h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -.025em; }
 .mobile-related { display: none; }
 .rg200u-article .article-card-cover img { object-position: center bottom; transform: scale(1.14); transform-origin: center bottom; }
 .rg200u-article:hover .article-card-cover img { transform: scale(1.18); }
-.rg200u-hero .hero-background { mask-image: linear-gradient(90deg, transparent 52%, #000 78%); }
+.rg200u-hero .hero-background, .ec20-hero .hero-background { mask-image: linear-gradient(90deg, transparent 52%, #000 78%); }
 .post-body details { margin: 24px 0; border: 1px solid var(--line); border-radius: 12px; padding: 18px; min-width: 0; }
 .post-body details summary { cursor: pointer; font-weight: 600; color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }

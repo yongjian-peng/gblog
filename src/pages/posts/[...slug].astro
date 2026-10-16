@@ -41,7 +41,7 @@ const url = new URL(Astro.url.pathname, SITE.url).href
     'author': { '@type': 'Person', 'name': SITE.author, 'url': SITE.url },
 }}
 >
-    <section class:list={['post-hero', { 'rg200u-hero': post.slug === 'rg200u-5g-debug' }]}>
+    <section class:list={['post-hero', { 'rg200u-hero': post.slug === 'rg200u-5g-debug', 'ec20-hero': post.slug === 'kylin-ec20-4g' }]}>
         <Image class="hero-background" src={post.data.banner} width={1672} height={941} alt={post.data.title} loading="eager" fetchpriority="high" />
         <div class="hero-shade"></div>
         <div class="container"><p class="hero-kicker handwritten"><a href={`/categories/${post.data.category}/`}>{category?.data.title ?? post.data.category}</a> · 技术与实践</p><h1>{post.data.title}</h1><p class="post-description">{post.data.description}</p><div class="author-inline"><BrandLogo /><span><strong>{SITE.author}</strong><small><time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time> · {remarkPluginFrontmatter.minutesRead}</small></span></div></div>
