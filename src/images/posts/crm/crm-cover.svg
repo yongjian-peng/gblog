@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">CRM 硬件监控与老化测试平台</title>
+  <desc id="desc">以四个协同节点和数据曲线表示采集、控制与持久化确认，属于架构主题示意，不是运行截图。</desc>
+  <rect width="1600" height="900" fill="#f7f3eb"/>
+  <circle cx="1330" cy="370" r="445" fill="#edd7c3"/>
+  <circle cx="1490" cy="770" r="310" fill="#dccbbb"/>
+  <g stroke="#b76c3b" stroke-width="5" fill="none"><path d="M1070 240H1380V610H1070Z"/><path d="M1070 240 1380 610M1380 240 1070 610" opacity=".3"/></g>
+  <g fill="#fffaf2" stroke="#c7a88d" stroke-width="3"><rect x="950" y="170" width="240" height="145" rx="26"/><rect x="1260" y="170" width="240" height="145" rx="26"/><rect x="950" y="535" width="240" height="145" rx="26"/><rect x="1260" y="535" width="240" height="145" rx="26"/></g>
+  <g fill="none" stroke="#a16d49" stroke-width="5" stroke-linejoin="round"><rect x="1010" y="202" width="120" height="68" rx="6"/><path d="M1070 270V285M1040 285H1100"/><rect x="1320" y="204" width="120" height="76" rx="6"/><path d="M1320 225H1440M1337 213H1343M1355 213H1361M1373 213H1379"/><path d="m1044 571-29 34 29 34m52-68 29 34-29 34m-16-76-20 84"/><ellipse cx="1380" cy="575" rx="58" ry="18"/><path d="M1322 575V635C1322 659 1438 659 1438 635V575M1322 605C1322 629 1438 629 1438 605"/></g>
+  <path d="M941 420H1025L1057 383 1093 450 1135 404 1180 420H1505" fill="none" stroke="#c57945" stroke-width="7"/>
+  <g fill="#9e542d"><circle cx="1070" cy="420" r="10"/><circle cx="1380" cy="420" r="10"/></g>
+</svg>

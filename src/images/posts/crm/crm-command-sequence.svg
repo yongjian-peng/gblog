@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1110" viewBox="0 0 640 1110" role="img" aria-labelledby="title desc">
+  <title id="title">远端任务从请求接受到执行和完成的时序示意</title>
+  <desc id="desc">Qt 或 Web 经 HTTP 请求后端，后端保存任务与命令并返回接受，再通过 MQTT 下发。Agent 去重与预检、执行 runner、返回命令 ACK 和独立性能状态事件，后端通过 WebSocket 更新页面。ACK 与状态事件可能交错。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#b86d3e"/></marker></defs>
+  <rect width="640" height="1110" rx="20" fill="#fbf5eb"/>
+  <g font-family="sans-serif" text-anchor="middle" fill="#302b26"><text x="320" y="43" font-size="27">接受请求、执行命令、任务完成分开确认</text><text x="85" y="112" font-size="26">Qt / Web</text><text x="320" y="112" font-size="26">FastAPI</text><text x="555" y="112" font-size="23">Agent / runner</text></g>
+  <g stroke="#d4c1ab" stroke-width="2" stroke-dasharray="7 7"><path d="M85 132V1030"/><path d="M320 132V1030"/><path d="M555 132V1030"/></g>
+  <g stroke="#b86d3e" stroke-width="3" fill="none" marker-end="url(#a)"><path d="M85 210H320"/><path d="M320 332H85"/><path d="M320 430H555"/><path d="M555 642H320"/><path d="M320 738H85"/><path d="M555 864H320"/><path d="M320 977H85"/></g>
+  <g font-family="sans-serif" text-anchor="middle" fill="#655546" font-size="24"><text x="202" y="181">HTTP 控制请求</text><text x="202" y="308">请求接受 / 命令号</text><text x="437" y="402">MQTT commandId</text><text x="437" y="612">命令 ACK：执行结果</text><text x="202" y="710">WS：命令状态</text><text x="437" y="817">独立的性能状态</text><text x="437" y="847">与任务终态事件</text><text x="202" y="948">WS：任务状态 / 历史</text></g>
+  <g fill="#fffaf2" stroke="#d4c1ab" stroke-width="2"><rect x="198" y="236" width="244" height="39" rx="9"/><rect x="418" y="473" width="208" height="88" rx="9"/><rect x="198" y="882" width="244" height="38" rx="9"/></g>
+  <g font-family="sans-serif" text-anchor="middle" fill="#302b26" font-size="22"><text x="320" y="263">保存任务、命令和目标</text><text x="522" y="506">去重、能力预检</text><text x="522" y="540">执行并跟踪自有进程</text><text x="320" y="908">按原 ID / 时间推进状态</text></g>
+  <g font-family="sans-serif" text-anchor="middle" fill="#8c5534" font-size="21"><text x="320" y="1060">ACK 与状态事件可能交错，按稳定 ID 关联</text><text x="320" y="1090">图示为业务阶段，不承诺跨通道的严格先后</text></g>
+</svg>
