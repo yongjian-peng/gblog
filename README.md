@@ -30,6 +30,36 @@ npm run preview
 
 静态文件生成到 `dist/`，可用于 GitHub Pages 等静态托管。
 
+## 上传到 GitHub Pages
+
+当前站点地址是 `https://yongjian-peng.github.io/`，部署在域名根目录，资源路径应为 `/assets/...`，无需添加 `/gblog` 前缀。
+
+1. 执行 `npm run build`。构建结束会自动检查发布标记及页面引用的本地 CSS，检查失败时不要上传。
+2. 将 **`dist/` 内的全部内容**上传到 `yongjian-peng.github.io` 发布仓库的根目录，包含隐藏文件 `.nojekyll`。不要将整个 `dist` 文件夹嵌套上传到根目录。
+3. 手动上传产物时，Pages 发布源对应发布仓库的 `main` 分支、`/(root)`；等待该仓库的 Pages 构建与部署完成。
+4. 确认线上首页及文章页显示正常，并在浏览器 Network 中检查 CSS 请求返回 `200`、类型为 `text/css`。如仍显示旧页面，可用 `Ctrl+F5` 刷新。
+
+发布仓库中的目录应类似：
+
+```text
+.nojekyll
+index.html
+assets/
+posts/
+categories/
+...
+```
+
+`public/.nojekyll` 会在每次构建时自动复制为 `dist/.nojekyll`。它用于跳过 GitHub Pages 的默认 Jekyll 处理，否则 `_slug_.xxxx.css` 等下划线开头的文件可能存在于仓库却无法在线访问。详见 [GitHub 官方说明](https://github.blog/news-insights/bypassing-jekyll-on-github-pages/)。Windows 复制或上传时请确认包含这个点号开头的文件。
+
+HTML 和 `assets/` 必须来自同一次构建，整批更新，避免新 HTML 引用了未上传的哈希文件。需要单独复查产物时，可运行：
+
+```shell
+node scripts/check-pages-build.mjs
+```
+
+源仓库另有 `.github/workflows/deploy.yml`，通过 Actions 直接上传 `dist` 作为 Pages artifact；这与上述独立发布仓库的手动上传方式是两条部署路径，请按实际使用方式发布。
+
 ## 内容与配置
 
 - `src/config.ts`：站点名称、导航、评论与统计配置。

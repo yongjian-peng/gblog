@@ -8,6 +8,7 @@ banner2: "@images/posts/k823-gnss-ins/vehicle-reference-axes.png"
 ogImage: "@images/posts/k823-gnss-ins/vehicle-reference-axes.png"
 tags: ["K823", "GNSS", "INS", "惯导", "北天天线", "串口", "Linux", "定位调试"]
 selected: true
+updatedDate: "2026-10-26T00:00:00+08:00"
 ---
 
 这套设备使用**北天 GNSS 双天线、司南（SinoGNSS）K823 GNSS/INS 板卡和 Linux 主机**。GNSS 负责卫星定位，INS 是惯性导航，需要结合安装方向、传感器与定位信息完成初始化。
@@ -17,6 +18,14 @@ selected: true
 > 本文依据目录中的整理手册与现场图片编写，整理日期为 2026年10月26日。本次没有重新连接设备测试；下文区分现场已有结果与供应商推荐流程。
 
 ## 1. 先认清设备和安装方向
+
+![北天双天线在窗边临时架设，天线下方连接同轴馈线](../../images/posts/k823-gnss-ins/beitian-dual-antenna-setup.png)
+
+*新增现场图：两根北天测量天线与馈线。窗边是临时调试位置，正式验证应选择无遮挡的开阔环境；这张照片不能说明双天线航向或惯导已初始化。*
+
+![北天 BT-800D 测量天线的型号标签与同轴接口](../../images/posts/k823-gnss-ins/beitian-bt800d-antenna.png)
+
+*标签可见 Beitian（北天）和 BT-800D 型号，发布副本已遮挡序列号与二维码。它是天线型号，与内部司南 K823 板卡型号要分别核对。*
 
 ![机箱上标注的 X、Y、Z 参考轴，Y 箭头被标为车头方向](../../images/posts/k823-gnss-ins/vehicle-reference-axes.png)
 
